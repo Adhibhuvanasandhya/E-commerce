@@ -75,7 +75,7 @@ app.post("/upload", upload.single('image'), (req, res) => {
   }
   res.json({
     success: true,
-    image_url: `http://localhost:${port}/images/${req.file.filename}`
+    image_url: `https://e-commerce-backend-mu-sage.vercel.app/images/${req.file.filename}`
   });
 });
 
