@@ -14,16 +14,14 @@ const { error } = require("console");
 
 
 
-
 const app = express();
 const port = process.env.PORT || 4000;
-
 
 
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use('/images', express.static(path.join(__dirname, 'public/upload/images'))); // Serve uploaded images as static files
+app.use('/images', express.static(path.join(__dirname, 'upload/images'))); // Serve uploaded images as static files
 
 // Database Connection
 mongoose.connect(process.env.MONGO_URI)
