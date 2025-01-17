@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import './ListProduct.css'
+import '@components/ListProduct/ListProduct.css';
+
 import cross_icon from '../../assets/Admin_Assets/cross_icon.png'
 
 const ListProduct = () => {
