@@ -1,70 +1,144 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LetShopsy
+# E-Commerce MERN Stack Application
 
-## Available Scripts
+A full-featured e-commerce web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This application includes user authentication, an admin panel, responsive design, cart management, and payment integration.
 
-In the project directory, you can run:
+![Homepage](src/frontend/components/Assets/Frontend_Assets/ecommerce.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Features
+- **Sign Up/Login:** Secure user authentication using `bcrypt` for password hashing and `JWT` for token-based authentication.
+- **Responsive Design:** Mobile-first design to ensure the website looks great on all devices.
+- **Product Browsing:** View all products and search by category or name.
+- **Cart Management:** Add, remove, and manage items in the cart.
+- **Payment Integration:** Make payments securely with integrated payment APIs.
 
-### `npm test`
+### Admin Features
+- **Admin Panel:**add products, and manage products.
+- **Add/Edit Products:** Add new products or update existing ones, including images and pricing.
+- **Remove Products:** Delete products from the inventory.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+### Frontend
+- **React.js:** Dynamic, responsive, and interactive user interface.
+- **Axios:** API communication with the backend.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+- **Node.js:** Backend server.
+- **Express.js:** Framework for handling routes, middleware, and RESTful APIs.
+- **Multer:** File upload handling (e.g., product images).
+- **bcrypt:** Password hashing for secure authentication.
+- **jsonwebtoken (JWT):** Token-based user authentication.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Database
+- **MongoDB:** NoSQL database for storing users, products, orders, and other data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deployment
+- **Frontend:** Deployed on Vercel.
+- **Backend:** Deployed on Vercel.
+- **Database:** Hosted on MongoDB Atlas.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+- **Node.js**: Ensure you have Node.js installed.
+- **MongoDB**: Set up a MongoDB instance or use MongoDB Atlas.
+- **Environment Variables**: Add a `.env` file with the following keys:
+  ```
+  PORT=4000
+  MONGO_URI=mongodb+srv://sandhyaponrajanl:1234@cluster0.wdhwq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  JWT_SECRET=secret_ecom
+  ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Adhibhuvanasandhya/E-commerce
+   cd E-commerce
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies:**
+   ```bash
+   cd backend
+   npm install
+   cd ../frontend
+   npm install
+   ```
 
-## Learn More
+3. **Start the application:**
+   - Backend:
+     ```bash
+     cd backend
+     npm start
+     ```
+   - Frontend:
+     ```bash
+     cd frontend
+     npm start
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. **Access the application:**
+   - Frontend: `https://e-commerce-frontend-pied-five.vercel.app`
+   - Backend: `https://e-commerce-backend-mu-sage.vercel.app`
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. **Frontend Deployment:** Use platforms like Vercel .
+2. **Backend Deployment:** Use platforms like Render, Vercel, or AWS.
+3. **Database:** Use MongoDB Atlas for cloud-hosted MongoDB.
 
-### `npm run build` fails to minify
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+ecommerce-mern/
+├── frontend/
+│   ├── public/
+│   ├── src/
+│       ├── components/
+│       ├── pages/
+│       ├── styles/
+│       ├── App.js
+│       └── index.js
+├── backend/
+│   ├── server.js
+│   ├── .env
+│   
+│   
+│   
+├── README.md
+```
+
+## APIs
+
+### User APIs
+- **POST /signup**: Register a new user.
+- **POST /login**: Login existing user.
+- **POST /addtocart**: Add items to the cart.
+- **POST /removefromcart**: Remove items from the cart.
+- **GET /getcart**: Fetch user's cart data.
+
+### Admin APIs
+- **POST /addproduct**: Add a new product.
+- **GET /allproducts**: Fetch all products.
+- **POST /removeproduct**: Remove a product by ID.
+
+## Future Enhancements
+- Add product reviews and ratings.
+- Implement advanced search with filters.
+-  payment gateways like scan to pay gpay and upi.
+- Add email notifications for orders.
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+**Developed by:** [Adhibhuvanasandhya](https://github.com/Adhibhuvanasandhya)
+```
