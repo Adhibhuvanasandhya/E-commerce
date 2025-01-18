@@ -48,11 +48,7 @@ A full-featured e-commerce web application built with the MERN stack (MongoDB, E
 - **Node.js**: Ensure you have Node.js installed.
 - **MongoDB**: Set up a MongoDB instance or use MongoDB Atlas.
 - **Environment Variables**: Add a `.env` file with the following keys:
-  ```
-  PORT=4000
-  MONGO_URI=mongodb+srv://sandhyaponrajanl:1234@cluster0.wdhwq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-  JWT_SECRET=secret_ecom
-  ```
+
 
 ### Installation
 
